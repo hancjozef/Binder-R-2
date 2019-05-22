@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ -f ~/binder/install.R ]; then 
+  mkdir -p ~/binder/R/packages; 
+  R --quiet -f ~/binder/install.R; 
+fi
+
+# enable jupyter notebook extensions
+jupyter contrib nbextension install --user
